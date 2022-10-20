@@ -10,17 +10,17 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.appium.java_client.windows.WindowsDriver;
+import io.appium.java_client.windows.WindowsElement;
 
 public class DDMainFunctions 
 {
-	public static WindowsDriver setUpMethod(WindowsDriver driver)
+	public static WindowsDriver<WebElement> setUpMethod(WindowsDriver<WebElement> driver)
 	{
 		DesiredCapabilities capb = new DesiredCapabilities();
 		capb.setCapability("app", "C:\\Program Files (x86)\\Advanced Digital Dictation\\Layer App\\OyezSpeech7.exe");
@@ -28,7 +28,7 @@ public class DDMainFunctions
 		capb.setCapability("deviceName", "WindowsPC");
 		try 
 		{
-			driver = new WindowsDriver(new URL("http://127.0.0.1:4723"), capb);
+			driver = new WindowsDriver<WebElement>(new URL("http://127.0.0.1:4723"), capb);
 		} 
 		catch (MalformedURLException e) 
 		{
@@ -39,7 +39,7 @@ public class DDMainFunctions
 		
 		}
 	
-	public static void aDDLogIn(WindowsDriver driver, String username, String password)
+	public static void aDDLogIn(WindowsDriver<WebElement> driver, String username, String password)
 	{
 		WebElement userN = DDMainFunctions.dynamicWaitConditional(driver, "accessibilityId", "UserName");
 		userN.sendKeys(username);
@@ -52,9 +52,9 @@ public class DDMainFunctions
 		}
 	}
 	
-	public static void recordDictation(WindowsDriver driver, int length)
+	public static void recordDictation(WindowsDriver<WindowsElement> driver, int length)
 	{
-		WebElement defaultBtn = driver.findElementByName("Default");
+//		WebElement defaultBtn = driver.findElementByName("Default");
 		WebElement recBtn = driver.findElementByAccessibilityId("recBtn");
 //		DDMainFunctions.dynamicallyWaitforElement(driver, recBtn);
 		recBtn.click();
@@ -62,7 +62,7 @@ public class DDMainFunctions
 		recBtn.click();
 	}
 	
-	public static String sendJobOut(WindowsDriver driver, String workTyp, String prior, String sendT, String desc)
+	public static String sendJobOut(WindowsDriver<WebElement> driver, String workTyp, String prior, String sendT, String desc)
 	{
 		driver.findElementByAccessibilityId("out").click();
 		WebElement workType = driver.findElementByName("Work type\r\n"
@@ -94,7 +94,7 @@ public class DDMainFunctions
 		return DDMainFunctions.getDateVal(d);
 	}
 	
-	public static void logOff(WindowsDriver driver)
+	public static void logOff(WindowsDriver<WebElement> driver)
 	{
 		driver.findElementByName("Log off").click();
 		try
@@ -107,13 +107,13 @@ public class DDMainFunctions
 		}
 	}
 	
-	public static void dynamicallyWaitforElement(WindowsDriver driver, WebElement ele)
+	public static void dynamicallyWaitforElement(WindowsDriver<WebElement> driver, WebElement ele)
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOf(ele));
 	}
 
-	public static WebElement dynamicWaitConditional(WindowsDriver driver, String attribute, String attValue)
+	public static WebElement dynamicWaitConditional(WindowsDriver<WebElement> driver, String attribute, String attValue)
 	{
 		WebElement ele;
 		for(int i=0; i<2;i++)
@@ -157,7 +157,7 @@ public class DDMainFunctions
 		}
 	}
 	
-	public static WebElement ifJobExists(WindowsDriver driver, String jobDesc)
+	public static WebElement ifJobExists(WindowsDriver<WebElement> driver, String jobDesc)
 	{
 		WebElement ele = null;
 		try
@@ -173,7 +173,7 @@ public class DDMainFunctions
 		}
 	}
 	
-	public static void verifyJob(WindowsDriver driver, String row, String jobDesc, String date1,String jobStatus)
+	public static void verifyJob(WindowsDriver<WebElement> driver, String row, String jobDesc, String date1,String jobStatus)
 	{
 		WebElement jobsTable = driver.findElementByAccessibilityId("JColResizer0");
 		if(findRowData(jobsTable, jobDesc, row) !=null && findRowData(jobsTable, jobStatus, row)!=null )
@@ -205,7 +205,7 @@ public class DDMainFunctions
 	
 	public static String getDateVal(Date d)
 	{
-		SimpleDateFormat yr = new SimpleDateFormat("YYYY");
+//		SimpleDateFormat yr = new SimpleDateFormat("YYYY");
 		SimpleDateFormat month_date = new SimpleDateFormat("MMM");
 		SimpleDateFormat dateV = new SimpleDateFormat("dd");
 		SimpleDateFormat min = new SimpleDateFormat("mm");
@@ -222,7 +222,7 @@ public class DDMainFunctions
 		return (Integer.parseInt(dateVal)+" "+month_date.format(d)+ " " + Integer.parseInt(hrVal)+":"+Integer.parseInt(mmVal));
 	}
 	
-	public static void verifyJobWithCreatedDate(WindowsDriver driver, String createdDate, String jobName, String expectedJobStatus)
+	public static void verifyJobWithCreatedDate(WindowsDriver<WebElement> driver, String createdDate, String jobName, String expectedJobStatus)
 	{
 		WebElement jobcreatedD = DDMainFunctions.ifJobExists(driver, createdDate);
 		if(jobcreatedD!=null)
