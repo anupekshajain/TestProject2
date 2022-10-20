@@ -1,21 +1,12 @@
 package com.mytests;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
-
-import com.cmdTest2;
 
 import io.appium.java_client.windows.WindowsDriver;
 
@@ -44,7 +35,8 @@ public class startWithALB {
 		try {
 			pro = proBd.start();
 			driver = new WindowsDriver<WebElement>(new URL("http://127.0.0.1:4723"), capb);
-			Thread.sleep(3000);
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			Thread.sleep(10000);
 			System.out.println("App Launched");
 		} catch (Exception e) {
 
@@ -54,11 +46,11 @@ public class startWithALB {
 		}
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
-		driver.findElementByAccessibilityId("Username").sendKeys("admin@oneadvanced.com");
+		driver.findElementByAccessibilityId("Username").sendKeys("Anupeksha.jain@oneadvanced.com");
 		driver.findElementByAccessibilityId("Username").sendKeys(Keys.TAB);
 		System.out.println(driver.getWindowHandles().size());
 		WebElement pswd = driver.findElementByAccessibilityId("Password");
-		pswd.sendKeys("4Dv4nc3d");
+		pswd.sendKeys("Password@1");
 		driver.findElementByXPath("//*[@Name='Login' and @LocalizedControlType='button']").click();
 		Thread.sleep(9000);
 		System.out.println("Wait over");
@@ -73,7 +65,7 @@ public class startWithALB {
 		{
 			System.out.println("driver gone");
 		}
-		
+		driver.quit();
 
 //		driver.manage().window().maximize();
 //		List<Map<String, Object>> s = driver.getAllSessionDetails();
