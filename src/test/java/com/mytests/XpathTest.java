@@ -12,7 +12,7 @@ import io.appium.java_client.windows.WindowsDriver;
 
 public class XpathTest 
 {
-	WindowsDriver driver = null;
+	WindowsDriver<WebElement> driver = null;
 	String winAppServPath = "C:\\Program Files (x86)\\Windows Application Driver\\WinAppDriver.exe";
 	ProcessBuilder proBd = new ProcessBuilder(winAppServPath).inheritIO();
 	Process pro;
