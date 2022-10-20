@@ -1,8 +1,5 @@
 package com.mytests;
 
-import org.testng.annotations.Ignore;
-import org.testng.annotations.Test;
-
 public class Deleted_References 
 {
 //	String recoverName = "Dictation recovered\r\n"

@@ -1,23 +1,5 @@
 package com.mytests;
 
-import java.util.Date;
-import java.util.List;
-
-import javax.swing.text.html.HTMLDocument.HTMLReader.ParagraphAction;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Ignore;
-import org.testng.annotations.Test;
-
-
-import io.appium.java_client.windows.WindowsDriver;
-import io.appium.java_client.windows.WindowsElement;
-
 public class DigDic2 
 {
 //	public static WindowsDriver<WebElement> driver = null;
