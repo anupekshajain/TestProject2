@@ -1,21 +1,5 @@
 package com.mytests;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Ignore;
-import org.testng.annotations.Test;
-
-import io.appium.java_client.windows.WindowsDriver;
-import io.appium.java_client.windows.WindowsElement;
-
 public class ADD {
 //	public static WindowsDriver<WindowsElement> driver = null;
 //	public static WebDriverWait wait;
