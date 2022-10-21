@@ -3,13 +3,14 @@ name: New test 2
   push:
     branches:
       - main
-  workflow_dispatch: null
+
 jobs:
   build:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
       - name: Set up JDK 18
+        uses: actions/setup-java@v3
         with:
           java-version: 18.0.2+101
           distribution: temurin
