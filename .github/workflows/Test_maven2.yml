@@ -25,8 +25,9 @@ jobs:
 
   test :
     needs : [build]
-    runs on : windows-latest
+    runs-on : windows-latest
     steps :
-    run : |
-      echo "Pass"
-      echo "Dot"
+      name : Test2
+      run : |
+          echo Pass
+          echo Dot
