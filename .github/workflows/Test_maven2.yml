@@ -23,10 +23,8 @@ jobs:
           mvn test
   
   test :
-    needs : [build]
     runs-on : windows-latest
     steps :
-      - name : Test2
       - run : |
           echo Pass
           echo Dot
