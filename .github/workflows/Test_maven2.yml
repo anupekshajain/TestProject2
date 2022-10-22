@@ -6,6 +6,7 @@ name: New test 2
 
 jobs:
   build:
+
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
@@ -21,3 +22,10 @@ jobs:
           mvn clean
           mvn compile
           mvn test
+
+  test :
+    needs : [build]
+    runs on : windows-latest
+    run : |
+      echo "Pass"
+      echo "Dot"
