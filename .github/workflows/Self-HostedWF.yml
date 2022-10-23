@@ -5,6 +5,7 @@ name: Self-Hosted First
 
 on:
   workflow_dispatch:
+  #dispatch
 
 jobs:
   build:
