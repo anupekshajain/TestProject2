@@ -52,8 +52,10 @@ public class startWithALB {
 //		System.out.println("Wait over");
 //		System.out.println(driver.toString());
 //		
-		
-		driver.quit();
+		if(driver!=null)
+		    {
+		    driver.quit();
+		    }
 		if (pro != null) {
 			pro.destroy();
 		}
