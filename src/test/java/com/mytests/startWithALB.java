@@ -37,10 +37,10 @@ public class startWithALB {
 			driver = new WindowsDriver<WindowsElement>(new URL("http://127.0.0.1:4723"), capb);
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			Thread.sleep(5000);
-//			System.out.println("App Launched");
+// 			System.out.println("App Launched");
 
 		} catch (Exception e) {
-//			System.out.println(e.getMessage());
+// 			System.out.println(e.getMessage());
 		}
 //		driver.findElementByAccessibilityId("Username").sendKeys("Anupeksha.jain@oneadvanced.com");
 //		driver.findElementByAccessibilityId("Username").sendKeys(Keys.TAB);

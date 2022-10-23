@@ -1,0 +1,21 @@
+# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
+
+name: Self-Hosted First
+
+on:
+  workflow_dispatch:
+  #dispatch
+
+jobs:
+  build:
+
+    runs-on: [self-hosted,BLR-763F163-L]
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build with Maven
+      run: |
+        mvn clean
+        mvn compile
+        mvn test
