@@ -42,13 +42,13 @@ public class startWithALB {
 		} catch (Exception e) {
 // 			System.out.println(e.getMessage());
 		}
-//		driver.findElementByAccessibilityId("Username").sendKeys("Anupeksha.jain@oneadvanced.com");
-//		driver.findElementByAccessibilityId("Username").sendKeys(Keys.TAB);
+		driver.findElementByAccessibilityId("Username").sendKeys("Anupeksha.jain@oneadvanced.com");
+		driver.findElementByAccessibilityId("Username").sendKeys(Keys.TAB);
 //		System.out.println(driver.getWindowHandles().size());
-//		WebElement pswd = driver.findElementByAccessibilityId("Password");
-//		pswd.sendKeys("Password@1");
-//		driver.findElementByXPath("//*[@Name='Login' and @LocalizedControlType='button']").click();
-//		Thread.sleep(9000);
+		WebElement pswd = driver.findElementByAccessibilityId("Password");
+		pswd.sendKeys("Password@1");
+		driver.findElementByXPath("//*[@Name='Login' and @LocalizedControlType='button']").click();
+		Thread.sleep(9000);
 //		System.out.println("Wait over");
 //		System.out.println(driver.toString());
 //		
