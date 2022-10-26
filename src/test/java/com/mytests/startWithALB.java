@@ -3,6 +3,7 @@ package com.mytests;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
 
@@ -37,18 +38,25 @@ public class startWithALB {
 			driver = new WindowsDriver<WindowsElement>(new URL("http://127.0.0.1:4723"), capb);
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			Thread.sleep(5000);
+		     driver.findElementByAccessibilityId("Username").sendKeys("Anupeksha.jain@oneadvanced.com");
+		        driver.findElementByAccessibilityId("Username").sendKeys(Keys.TAB);
+//		      System.out.println(driver.getWindowHandles().size());
+		        WindowsElement pswd = driver.findElementByAccessibilityId("Password");
+		        pswd.sendKeys("Password@1");
+		        driver.findElementByXPath("//*[@Name='Login' and @LocalizedControlType='button']").click();
+		        Thread.sleep(9000);
 // 			System.out.println("App Launched");
 
 		} catch (Exception e) {
 // 			System.out.println(e.getMessage());
 		}
-		driver.findElementByAccessibilityId("Username").sendKeys("Anupeksha.jain@oneadvanced.com");
-		driver.findElementByAccessibilityId("Username").sendKeys(Keys.TAB);
-//		System.out.println(driver.getWindowHandles().size());
-		WebElement pswd = driver.findElementByAccessibilityId("Password");
-		pswd.sendKeys("Password@1");
-		driver.findElementByXPath("//*[@Name='Login' and @LocalizedControlType='button']").click();
-		Thread.sleep(9000);
+//		driver.findElementByAccessibilityId("Username").sendKeys("Anupeksha.jain@oneadvanced.com");
+//		driver.findElementByAccessibilityId("Username").sendKeys(Keys.TAB);
+////		System.out.println(driver.getWindowHandles().size());
+//		WindowsElement pswd = driver.findElementByAccessibilityId("Password");
+//		pswd.sendKeys("Password@1");
+//		driver.findElementByXPath("//*[@Name='Login' and @LocalizedControlType='button']").click();
+//		Thread.sleep(9000);
 //		System.out.println("Wait over");
 //		System.out.println(driver.toString());
 //		
