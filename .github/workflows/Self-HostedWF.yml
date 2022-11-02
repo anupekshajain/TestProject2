@@ -13,7 +13,6 @@ jobs:
     runs-on: [self-hosted,BLR-763F163-L]
 
     steps:
-    - uses: actions/checkout@v3
     - name: Build with Maven
       run: |
         mvn test
