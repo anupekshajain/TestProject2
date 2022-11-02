@@ -32,12 +32,12 @@ public class startWithALB {
         capb.setCapability("app", "C:\\Program Files (x86)\\Advanced Legal\\ALB\\PMS\\IRIS.Law.PmsExe.exe");
         String winAppURL = "http://127.0.0.1:4723";
         capb.setCapability("platformName", "Windows");
-        capb.setCapability("ms:waitForAppLaunch", "500");
+        capb.setCapability("ms:waitForAppLaunch", "50");
 
         try {
             pro = proBd.start();
             driver = new WindowsDriver<WindowsElement>(new URL("http://127.0.0.1:4723"), capb);
-            driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
             Thread.sleep(30000);
     
             // System.out.println("App Launched");
