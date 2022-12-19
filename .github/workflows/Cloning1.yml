@@ -11,7 +11,7 @@ jobs:
         - name: setup
           uses: TestProject2/clone-github-repo-action@v2
           with:
-            owner: 'Anupeksha'
+            owner: 'anupekshajain'
             repository: 'TestProject2'
             access-token: ${{ secrets.ACCESS_TOKEN }}
   
