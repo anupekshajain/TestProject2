@@ -11,8 +11,9 @@ jobs:
         - name: setup
           run: |
             cmd.exe
-            chown ACS\Anupeksha.jain C:\
-            cd C:\Users\Anupeksha.Jain\Temporary
+            cd C:\Users\Anupeksha.Jain
+            mkdir ALB
+            cd ALB
          
           
   
