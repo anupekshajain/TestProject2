@@ -12,7 +12,7 @@ jobs:
           run: |
             powershell.exe
             cd C:\Users\Anupeksha.Jain
-            sudo chown anupeksha.jain mkdir ALB
+            chown ACS\anupeksha.jain mkdir ALB
           
   
   
