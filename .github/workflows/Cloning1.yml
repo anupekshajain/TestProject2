@@ -11,8 +11,6 @@ jobs:
         - name: setup
           run: |
             powershell.exe
-            start-process powershell -verb runas
             cd C:\Users\Anupeksha.Jain
-            git clone https://$SECRET_USER:$SECRET_PASSWORD@github.com/other-organization/other-repo.git
   
   
