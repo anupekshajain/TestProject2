@@ -10,8 +10,9 @@ jobs:
     steps:
         - name: setup
           run: |
+            sudo chown -R <username> /usr/local/lib/node_modules/gh-pages/.cache
             cmd.exe
-            cd C:\Users\Anupeksha.Jain
+            cd C:\GitHub_SelfHosted_Runner
             git clone https://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@github.com/anupekshajain/TestProject2.git
          
           
