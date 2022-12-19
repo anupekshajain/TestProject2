@@ -11,6 +11,6 @@ jobs:
         - name: setup
           run: |
             powershell.exe
-            cd C:\Users\Anupeksha.Jain\OneDrive - Advanced\Automation Tech for ALB
+            cd C:\Users\Anupeksha.Jain
   
   
