@@ -13,6 +13,7 @@ jobs:
             powershell.exe
             cd C:\Users\Anupeksha.Jain
             mkdir ALB
+            cd ALB
             git clone https://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@github.com/anupekshajain/TestProject2.git
   
   
