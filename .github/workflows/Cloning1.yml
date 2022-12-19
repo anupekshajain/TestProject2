@@ -11,6 +11,7 @@ jobs:
         - name: setup
           run: |
             powershell.exe
-            cd C:\Users\Anupeksha.Jain
+            cd C:\Users\Anupeksha.Jain\Temporary
+            https://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@github.com/anupekshajain/TestProject2.git
   
   
