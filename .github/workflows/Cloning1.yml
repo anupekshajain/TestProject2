@@ -1,0 +1,18 @@
+name: Batch File Test
+
+on:
+
+  workflow_dispatch:
+
+jobs:
+  Test1:
+    runs-on: [self-hosted,BLR-763F163-L]
+    steps:
+        - name: setup
+          uses: TestProject2/clone-github-repo-action@v2
+          with:
+            owner: 'Anupeksha'
+            repository: 'TestProject2'
+            access-token: ${{ secrets.ACCESS_TOKEN }}
+  
+  
