@@ -12,7 +12,7 @@ jobs:
           run: |
             cmd.exe
             cd C:\Users\Anupeksha.Jain
-            https://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@github.com/anupekshajain/TestProject2.git
+            git clone https://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@github.com/anupekshajain/TestProject2.git
          
           
   
