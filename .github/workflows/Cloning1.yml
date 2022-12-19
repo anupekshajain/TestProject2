@@ -10,9 +10,9 @@ jobs:
     steps:
         - name: setup
           run: |
-            powershell.exe
+            cmd.exe
             cd C:\Users\Anupeksha.Jain
-            chown ACS\anupeksha.jain mkdir ALB
+         
           
   
   
