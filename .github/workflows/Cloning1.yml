@@ -9,10 +9,10 @@ jobs:
     runs-on: [self-hosted,BLR-763F163-L]
     steps:
         - name: setup
-          uses: TestProject2/clone-github-repo-action@v2
-          with:
-            owner: 'anupekshajain'
-            repository: 'TestProject2'
-            access-token: ${{ secrets.ACCESS_TOKEN }}
+          run:
+            powershell.exe
+            start-process powershell -verb runas
+            cd C:\Users\Anupeksha.Jain
+            git clone https://$SECRET_USER:$SECRET_PASSWORD@github.com/other-organization/other-repo.git
   
   
