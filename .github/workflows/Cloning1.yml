@@ -9,7 +9,7 @@ jobs:
     runs-on: [self-hosted,BLR-763F163-L]
     steps:
         - name: setup
-          run:
+          run: |
             powershell.exe
             start-process powershell -verb runas
             cd C:\Users\Anupeksha.Jain
