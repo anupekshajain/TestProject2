@@ -10,11 +10,7 @@ jobs:
     steps:
         - name: setup
           run: |
-            sudo chown -R ACS\Anupeksha.jain /usr/local/lib/node_modules/gh-pages/.cache
-            cmd.exe
-            cd C:\Users\Anupeksha.Jain\Temporary
-            git clone https://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@github.com/anupekshajain/TestProject2.git
-         
-          
+           cd C:\
+           git clone https://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@github.com/anupekshajain/TestProject2.git
   
   
